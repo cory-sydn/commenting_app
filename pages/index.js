@@ -38,7 +38,7 @@ export default function Home({commentList}) {
 }
 
 export const getServerSideProps = async() => {
-  const response = await axios.get("http://localhost:3000/api/comments")
+  const response = await axios.get("https://commenting-app.vercel.app/api/comments")
   return {
     props:{
       commentList:response.data,

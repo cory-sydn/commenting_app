@@ -92,7 +92,7 @@ const Comment = ({ com, isChild }) => {
 				upvotes: com.upvotes + 1,
 			};
 			const upvoteRes = await axios.put(
-				`http://localhost:3000/api/comments/${com._id}`,
+				`https://commenting-app.vercel.app/api/comments/${com._id}`,
 				upvoted
 			);
 			const updatedList = comments.map((obj) => {

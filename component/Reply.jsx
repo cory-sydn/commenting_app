@@ -36,8 +36,8 @@ const Reply = ({parentId, setStartReply}) => {
         text: state.text,
         parent: parentId
       }
-      const replyComment = await axios.post("http://localhost:3000/api/comments", newComment)
-      const updatedParent = await axios.put(`http://localhost:3000/api/comments/reply/${parentId}`, {
+      const replyComment = await axios.post("https://commenting-app.vercel.app/api/comments", newComment)
+      const updatedParent = await axios.put(`https://commenting-app.vercel.app/api/comments/reply/${parentId}`, {
         childId: replyComment.data._id,
       })
       const updatedList = comments.map((obj) => {

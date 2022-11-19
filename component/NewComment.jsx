@@ -80,7 +80,7 @@ const NewComment = () => {
         author: state.author,
         text: state.text
       }
-      const res = await axios.post("http://localhost:3000/api/comments", newComment)
+      const res = await axios.post("https://commenting-app.vercel.app/api/comments", newComment)
       setComments((prev) => [...prev, res.data])
       setState({author: "", text: ""})
     } catch (error) {
